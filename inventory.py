@@ -36,7 +36,7 @@ class ItemNotFoundError(Exception):
 # InventoryItem
 # -----------------------------------------------------------------------
 
-class inventoryItem:
+class InventoryItem:
 
     LOW_STOCK = 5      
     def __init__(self, sku, name, quantity=0, price=0.0, low_stock_threshold=5):
@@ -67,7 +67,7 @@ class inventoryItem:
         print("Discounted price: " + str(discounted))  
         return discounted
 
-    def applyDiscount(self, discount_pct):     
+    def Apply_Discount(self, discount_pct):     
         discounted = self.price - (self.price * discount_pct)
         discounted = discounted + (discounted * 0.08)
         print("Discounted price: " + str(discounted))
