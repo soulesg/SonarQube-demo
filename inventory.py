@@ -105,7 +105,7 @@ class Inventory:
         self._record("ADD_ITEM", item.sku, 0)
 
     def get_item(self, sku):
-        if not sku in self._items:     
+        if sku not in self._items:     
             raise ItemNotFoundError(f"Item not found: {sku}")
         return self._items[sku]
 
@@ -120,7 +120,7 @@ class Inventory:
     def restock(self, sku, amount):
         if amount <= 0:
             raise ValueError("Restock amount must be positive")
-        if not sku in self._items:
+        if sku not in self._items:
             raise ItemNotFoundError(f"Item not found: {sku}")
 
         item = self._items[sku]
@@ -135,7 +135,7 @@ class Inventory:
         
 
     def sell(self, sku, amount):
-        if not sku in self._items:
+        if sku not in self._items:
             raise ItemNotFoundError(f"Item not found: {sku}")
 
         item = self._items[sku]
