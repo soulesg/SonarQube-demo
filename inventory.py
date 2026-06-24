@@ -67,12 +67,6 @@ class InventoryItem:
         print("Discounted price: " + str(discounted))  
         return discounted
 
-    def apply_discount(self, discount_pct):     
-        discounted = self.price - (self.price * discount_pct)
-        discounted = discounted + (discounted * 0.08)
-        print("Discounted price: " + str(discounted))
-        return discounted
-
     def __repr__(self):
         return "InventoryItem(sku=" + self.sku + ", qty=" + str(self.quantity) + ")"
 
