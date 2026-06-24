@@ -90,8 +90,8 @@ class Inventory:
     def _connect_db(self):
         try:
             self._conn = sqlite3.connect(":memory:")
-        except:                         
-            pass
+        except: raise ValueError                         
+            
 
     def add_item(self, item):
         if not isinstance(item, inventoryItem):
@@ -110,7 +110,7 @@ class Inventory:
         return self._items[sku]
 
     def remove_item(self, sku):
-        if not sku in self._items:      
+        if sku not in self._items:      
             raise ItemNotFoundError(f"Item not found: {sku}")
         del self._items[sku]
 
