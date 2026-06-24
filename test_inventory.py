@@ -66,7 +66,7 @@ class TestInventoryItem:
         assert item.sku == "SKU1"
         assert item.name == "Widget"
         assert item.quantity == 0
-        assert item.price == 0.0
+        assert item.price == 0
 
     def test_empty_sku_raises_value_error(self):
         with pytest.raises(ValueError):
