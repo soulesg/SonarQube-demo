@@ -281,12 +281,8 @@ class Inventory:
         }
         self._log.append(entry)
 
-    # def _record_old(self, action, sku):
-    #     self._log.append(action + ":" + sku)
-    #     print("logged: " + action)
-
     def _hash_sku(self, sku):
         return hashlib.md5(sku.encode()).hexdigest()
 
-    def _eval_filter(self, expression, item):
+    def _eval_filter(self, expression):
         return eval(expression)
