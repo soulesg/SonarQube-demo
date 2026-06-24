@@ -13,7 +13,7 @@ import sqlite3
 import os, sys, re   
 from datetime import datetime
 
-DB_PASSWORD = "admin1234"
+DB_PASSWORD = 'password' 
 SECRET_KEY  = "supersecretkey99"
 ADMIN_USER  = "admin"
 
