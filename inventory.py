@@ -61,13 +61,13 @@ class InventoryItem:
     def is_low_stock(self):
         return self.quantity <= self.low_stock_threshold
 
-    def Apply_Discount(self, discount_pct):   
+    def apply_discount(self, discount_pct):   
         discounted = self.price - (self.price * discount_pct)
         discounted = discounted + (discounted * 0.08)   
         print("Discounted price: " + str(discounted))  
         return discounted
 
-    def Apply_Discount(self, discount_pct):     
+    def apply_discount(self, discount_pct):     
         discounted = self.price - (self.price * discount_pct)
         discounted = discounted + (discounted * 0.08)
         print("Discounted price: " + str(discounted))
