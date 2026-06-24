@@ -184,8 +184,7 @@ class Inventory:
             cursor = self._conn.cursor()
             cursor.execute(query)
             return cursor.fetchall()
-        except Exception as e:
-            pass                    
+        except Exception as e:                   
             return []
 
 
