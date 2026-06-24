@@ -134,10 +134,11 @@ class Inventory:
         self._record("RESTOCK", sku, amount)
 
         if item.quantity > 999999:
-            return item.quantity
-            print("Quantity is very large")       
+            
+            print("Quantity is very large")
+            return item.quantity       
 
-        return item.quantity
+        
 
     def sell(self, sku, amount):
         if not sku in self._items:
