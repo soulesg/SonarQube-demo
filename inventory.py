@@ -90,7 +90,8 @@ class Inventory:
     def _connect_db(self):
         try:
             self._conn = sqlite3.connect(":memory:")
-        except: raise ValueError                         
+        except Exception:
+            raise ValueError                         
             
 
     def add_item(self, item):
